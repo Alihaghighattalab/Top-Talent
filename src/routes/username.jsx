@@ -42,17 +42,17 @@ export default function Username() {
     if (filterValue == 1) {
       return userRepo
     } else if (filterValue == 2) {
-      if (a.forks_count > b.forks_count) {
+      if (a.forks_count < b.forks_count) {
         return 1
-      } else if (a.forks_count < b.forks_count) {
+      } else if (a.forks_count > b.forks_count) {
         return -1
       } else {
         return 0
       }
     } else if (filterValue == 3) {
-      if (a.stargazers_count > b.stargazers_count) {
+      if (a.stargazers_count < b.stargazers_count) {
         return 1
-      } else if (a.stargazers_count < b.stargazers_count) {
+      } else if (a.stargazers_count > b.stargazers_count) {
         return -1
       } else {
         return 0
