@@ -10,7 +10,7 @@ export default function Username() {
   const [userRepo, setUserRepo] = useState([])
   const [filterValue, setFilterValue] = useState(1)
   const [error, setError] = useState(false)
-  
+
   var resultFilter = []
   useEffect(() => {
     getUsername()
@@ -58,9 +58,9 @@ export default function Username() {
         return 0
       }
     } else {
-      if (a.updated_at > b.updated_at) {
+      if (a.updated_at < b.updated_at) {
         return 1
-      } else if (a.updated_at < b.updated_at) {
+      } else if (a.updated_at > b.updated_at) {
         return -1
       } else {
         return 0
